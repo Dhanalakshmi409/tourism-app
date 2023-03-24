@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:tourismapp/bookingpage.dart';
 import 'package:tourismapp/checkout.dart';
 import 'package:tourismapp/menupage.dart';
+import 'package:tourismapp/mytheme.dart';
 
 class PostBottomBar extends StatefulWidget {
   const PostBottomBar({super.key});
@@ -20,7 +21,7 @@ class _PostBottomBarState extends State<PostBottomBar> {
       height: MediaQuery.of(context).size.height / 1.8,
       padding:const EdgeInsets.only(top: 20,left: 20,right: 20),
       decoration:const BoxDecoration(
-        color: Color.fromARGB(255, 212, 158, 158),
+        color: Mytheme.splash,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(40),
           topRight: Radius.circular(40),
@@ -155,29 +156,7 @@ class _PostBottomBarState extends State<PostBottomBar> {
             ],
           ),
           ),
-        // const  Divider(height: 25, thickness: 1),
-        // Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        // children: [
-        //   Column(
-        //     mainAxisAlignment: MainAxisAlignment.center,
-        //     children: [
-        //       Text("Total",
-        //       style: TextStyle(
-        //         fontSize: 23,
-        //         color: Color.fromARGB(162, 0, 0, 0),
-        //         fontWeight: FontWeight.bold,
-        //       ),
-        //       ),
-        //       SizedBox(height: 8),
-        //       Text("\$470",
-        //       style: TextStyle(
-        //         fontSize: 23,
-        //         color: Color(0xFFFFB608),
-        //         fontWeight: FontWeight.bold,
-        //       ),
-        //       ),
-        //       ],
-        //   ),
+        //
           GestureDetector(
             onTap: () {
               Get.to(CheckoutScreen());
@@ -198,31 +177,8 @@ class _PostBottomBarState extends State<PostBottomBar> {
           ),
        ],
         ),
-      ),
-
-                    // Container(
-                      // padding:const EdgeInsets.all(10),
-                      // decoration: BoxDecoration(
-                      //   borderRadius: BorderRadius.circular(10),
-                      //   color: Colors.white,
-                      //   boxShadow:const [
-                      //     BoxShadow(
-                      //       color: Colors.black26,
-                      //       blurRadius: 4,
-                      //     ),
-                      //   ],
-                      // ),
-                    //   child:const Icon(Icons.bookmark_outline,size: 40),
-                    // ),
-              // Container(
-              //   child: ElevatedButton(onPressed: () {
-              //     Get.to(const BookingScreen());
-              //   }, child:const Text("Book Now",
-              //   style: TextStyle(
-              //     color: Colors.white,fontSize: 26,
-              //     fontWeight: FontWeight.w500
-              //   ),)),
-              // ),
+                    )
+                   
                ],
                 ),
               ),

@@ -1,9 +1,9 @@
 // ignore_for_file: avoid_print
 
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:tourismapp/mytheme.dart';
 
 class ImagePickerPage extends StatefulWidget {
   const ImagePickerPage({Key? key}) : super(key: key);
@@ -18,7 +18,7 @@ class _ImagePickerPageState extends State<ImagePickerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.yellow.shade800,
+      backgroundColor: Mytheme.splash,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -57,6 +57,7 @@ class _ImagePickerPageState extends State<ImagePickerPage> {
         context: context,
         builder: (BuildContext context) {
           return Dialog(
+            backgroundColor: Color.fromARGB(255, 169, 62, 219),
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20.0)), //this right here
             child: Container(
@@ -118,30 +119,32 @@ class _ImagePickerPageState extends State<ImagePickerPage> {
                               ));
                             }
                           },
-                          child: Card(
-                              elevation: 5,
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  children: [
-                                    Image.asset(
-                                      'assets/images/camera.png',
-                                      height: 60,
-                                      width: 60,
-                                    ),
-                                    Text('Camera'),
-                                  ],
-                                ),
-                              )),
-                        ),
-                      ],
-                    )
+            child: Card(
+                elevation: 5,
+                   child: Padding(
+                     padding: const EdgeInsets.all(8.0),
+                       child: Column(
+                        children: [
+                           Image.asset(
+                             'assets/images/camera.png',
+                              height: 60,
+                             width: 60,
+                             ),
+                     Text('Camera'),
                   ],
+                 ),
+                )
                 ),
-              ),
-            ),
-          );
-        });
+               ),
+              ],
+             )
+            ],
+           ),
+          ),
+         ),
+       );
+      }
+    );
   }
 
   selectImageFromGallery() async {

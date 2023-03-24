@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tourismapp/detail.dart';
 import 'package:tourismapp/homepage.dart';
+import 'package:tourismapp/mytheme.dart';
 import 'package:tourismapp/postscreen.dart';
 
 const stylistData = [
@@ -43,7 +44,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-backgroundColor:const Color.fromARGB(255, 44, 6, 179),
+backgroundColor:Color.fromARGB(255, 205, 82, 230),
 body: SingleChildScrollView(
   child: SafeArea(child: Column(
     children: <Widget>[
@@ -55,12 +56,12 @@ body: SingleChildScrollView(
         Get.to(const PostScreen());
         }, icon:const Icon(Icons.arrow_back_ios,
         size: 30,
-        color: Color.fromARGB(255, 241, 190, 190),)),
+        color: Color.fromARGB(255, 96, 5, 119),)),
         IconButton(onPressed: () {
           Get.to(HomePage());
         }, icon:const Icon(Icons.menu,
         size: 30,
-        color: Color.fromARGB(255, 199, 108, 108),)
+        color: Color.fromARGB(255, 96, 5, 119),)
         ),
          ], 
       ),
@@ -72,7 +73,7 @@ body: SingleChildScrollView(
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
       decoration:const BoxDecoration(
-        color: Color.fromARGB(255, 226, 169, 188),
+        color: Mytheme.splash,
         borderRadius: BorderRadius.vertical(
           top: Radius.circular(30),
         ),
@@ -165,7 +166,8 @@ const StylistCard(this.stylist);
                 MaterialButton(onPressed: () {
                   Get.to(DetailScreen(stylist));
                 },
-                color: Color.fromARGB(255, 74, 147, 207),
+          color: Color.fromARGB(255, 218, 165, 228),
+                
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),

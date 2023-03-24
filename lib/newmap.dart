@@ -69,7 +69,7 @@ class _MyLocationState extends State<MyLocation> {
         controller: _searchController,
         decoration: InputDecoration(
           filled: true,
-          fillColor: Color.fromARGB(255, 93, 192, 231),
+          fillColor: Color.fromARGB(255, 218, 165, 228),
           hintText: 'Search your Destination',
           suffixIcon: IconButton(
                     icon: const Icon(Icons.search,color: Color.fromARGB(255, 6, 17, 22),size: 30,),
@@ -120,7 +120,8 @@ class _MyLocationState extends State<MyLocation> {
                     color: Colors.black,fontSize: 20
                    ),),
                    style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all<Color>(Color.fromARGB(255, 139, 129, 187)),
+                    backgroundColor:
+                     MaterialStateProperty.all<Color>(Color.fromARGB(255, 235, 234, 241)),
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                       RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),)

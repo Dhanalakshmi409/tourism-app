@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tourismapp/mytheme.dart';
 
 class RateusPage extends StatefulWidget {
   const RateusPage({super.key});
@@ -12,11 +13,15 @@ class _RateusPageState extends State<RateusPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue,
         title: Text('Rate us'),
       ),
-      backgroundColor: Colors.blue[100],
+      backgroundColor: Colors.white,
       body:
-        Center(child: Image(image: AssetImage('assets/images/smily.jpeg'))),
+        Center(
+          child: 
+          Image(image: AssetImage('assets/images/rateus.jpeg'),
+          fit: BoxFit.cover)),
     
        
     );

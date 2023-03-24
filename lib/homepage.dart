@@ -1,9 +1,9 @@
 // ignore_for_file: sized_box_for_whitespace
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tourismapp/homeappbar.dart';
+import 'package:tourismapp/mapscreen.dart';
+import 'package:tourismapp/mytheme.dart';
 import 'package:tourismapp/postscreen.dart';
 
 class HomePage extends StatelessWidget {
@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 209, 158, 158),
+      backgroundColor: Mytheme.splash,
       appBar:const PreferredSize(
           preferredSize: Size.fromHeight(90.0),
           child: HomeAppBar(),
@@ -50,8 +50,7 @@ class HomePage extends StatelessWidget {
                       (BuildContext context, int index) {
                       return InkWell(
                         onTap: () {
-                          Navigator.push(context, 
-                          MaterialPageRoute(builder:(context) =>const PostScreen(), ),);
+                    Get.to( const MapScreen());
                         },
                         child: Container(
                           width: 160,
@@ -111,6 +110,7 @@ class HomePage extends StatelessWidget {
                        ),
                         ],
                        ),
+                       
                   child: Text( 
                     Category[i],
                   style:const TextStyle(

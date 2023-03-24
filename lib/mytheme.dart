@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
   
 class Mytheme{
-  static const splash = Color.fromARGB(255, 131, 58, 226);
+  static const splash = Color.fromARGB(255, 127, 59, 230);
   static const statusBar = Color(0xFF2E3147);
   static const appBarColor = Color(0xFF222539);
   static const greenColor = Colors.green;

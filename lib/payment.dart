@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter/material.dart';
 import 'package:razorpay_flutter/razorpay_flutter.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -13,6 +15,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
 
 late Razorpay razorpay;
 TextEditingController textEditingController = TextEditingController();
+
 
 @override 
 void initState(){
@@ -36,10 +39,12 @@ void openCheckout(){
    'amount': num.parse(textEditingController.text)*100,
    'name': 'Tourism App',
    'description': 'Booking for looks',
-   'prefill': {'contact': '7305187080', 'email': 'idhana9708@gmail.com.com'},
+   'timeout':300,
+   'prefill': {'contact': '7305187080', 
+       'email': 'idhana9708@gmail.com.com'},
    'external': {
    'wallets': ['paytm']
-                    }
+    }
   };
 
   try {
@@ -67,18 +72,21 @@ void handlerExternalWallet(){
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.purple[100],
       appBar: AppBar(
-        title:const Text("Razor Pay"),
+        backgroundColor: Color.fromARGB(255, 153, 25, 228),
+        title:const Text("Payment"),
       ), 
-      backgroundColor: Color.fromARGB(255, 197, 138, 10),
-      body: 
+      
+      body:
       Padding(padding: const EdgeInsets.all(30.0),
       child: Column(
         children: [
+        SizedBox(height: 20,),
           TextField(
             controller: textEditingController,
             decoration:const InputDecoration(
-              hintText: "Amount to pay",
+              hintText: "Enter Your Amount",
               hintStyle: TextStyle(fontSize: 25,
               fontWeight: FontWeight.bold),
               filled: true,
@@ -87,11 +95,12 @@ void handlerExternalWallet(){
   
         const  SizedBox(height: 12,),
           ElevatedButton(
+            style: ElevatedButton.styleFrom(backgroundColor: Color.fromARGB(255, 185, 73, 216)),
             onPressed: () {
             openCheckout();
           }, 
           child:const Text("Pay Now", style: TextStyle(
-            color: Color.fromARGB(255, 121, 28, 28)
+            color: Colors.white
           ),),),
         ],
       )

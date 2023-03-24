@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_nullable_for_final_variable_declarations
+
 import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -66,9 +68,7 @@ void googleLogin() async{
   update();
   try {
     googleSignIn.disconnect();
-  } catch (e) {
-
-  }
+  } catch (e) {}
 try {
   final GoogleSignInAccount? googleSignInAccount = await googleSignIn.signIn();
   if (googleSignInAccount != null){

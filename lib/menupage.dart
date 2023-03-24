@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
+import 'package:tourismapp/mytheme.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
@@ -59,10 +60,10 @@ List<String> AssetImage=[
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(backgroundColor:Color.fromARGB(255, 21, 133, 25),
-        title:const Text("Favorite List"),),
+      appBar: AppBar(backgroundColor:Colors.blue,
+        title:const Text("Most Visited Places"),),
       body: Container(
-        color:Color.fromARGB(255, 172, 214, 200),
+        color:Mytheme.splash,
         child: GridView.builder(
           itemCount: AssetImage.length,
           itemBuilder: ((context, index) => 

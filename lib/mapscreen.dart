@@ -14,16 +14,25 @@ class _MapScreenState extends State<MapScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Color.fromARGB(255, 153, 25, 228),
         title:const Text("Google Maps"),
          ),
-      body:
+      body:Container(
+        decoration:const BoxDecoration(
+        image: DecorationImage(
+         image: AssetImage("assets/images/map1.jpeg"),
+        fit: BoxFit.cover,
+        opacity: 3,
+        ),
+      ),
+      child:
        Center(
          child: SizedBox(
           width: MediaQuery.of(context).size.width,
           child: 
           Column(
             children: [
-              Image(image:AssetImage('assets/images/maptour.png') ),
+              // ignore: prefer_const_constructors
               ElevatedButton(onPressed: () {
                 Get.to(const MyLocation());
               }, child:const Text("Google Map"))
@@ -31,6 +40,7 @@ class _MapScreenState extends State<MapScreen> {
           ),
       ),
        ),
+    ),
     );
   }
 }

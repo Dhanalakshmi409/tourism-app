@@ -19,14 +19,10 @@ late Animation<double> _animation;
 @override
 void initState() {
   _animationController = AnimationController(vsync: this, 
-  duration:const Duration(milliseconds: 1000));
+  duration:const Duration(milliseconds:2500));
   _animation = CurvedAnimation(parent: _animationController, 
   curve: Curves.bounceOut,reverseCurve: Curves.bounceIn);
   _animationController.forward();
-
-// Timer(const Duration(milliseconds: 2500), 
-//      () => Navigator.pushReplacement(context, 
-//          MaterialPageRoute(builder: (context) => LogInScreen(),)), );
 
   super.initState();
 }
@@ -50,9 +46,12 @@ void dispose() {
           child: ScaleTransition(
             scale: _animation,
           child: Image.asset("assets/images/india1.jpeg",height:800),
+          
           ),
+          
           ),
         ),
+
     );
   }
 }

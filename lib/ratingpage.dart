@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
+import 'package:tourismapp/mytheme.dart';
 import 'package:tourismapp/rateus.dart';
 
 class RatingScreen extends StatefulWidget {
@@ -18,10 +19,11 @@ double rating = 0;
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:const Text("Star Rating"),
+        backgroundColor: Color.fromARGB(255, 153, 25, 228),
+        title:const Text("Star Rating",),
         centerTitle: true,
       ),
-      backgroundColor: Color.fromARGB(255, 201, 38, 179),
+      backgroundColor: Color.fromARGB(255, 176, 138, 219),
       body: Center(
         child:Column(
           mainAxisAlignment:MainAxisAlignment.center,
@@ -41,7 +43,9 @@ double rating = 0;
            })
            ),
         ),
-    ElevatedButton(onPressed: (() {
+    ElevatedButton(
+      style: ElevatedButton.styleFrom(backgroundColor: Color.fromARGB(255, 185, 73, 216)),
+      onPressed: (() {
       Get.to(const RateusPage());
     }), child: Text("Thanks for Rating us"))
           ],

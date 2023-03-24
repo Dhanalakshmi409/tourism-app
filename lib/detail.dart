@@ -1,8 +1,10 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tourismapp/bookingpage.dart';
 import 'package:tourismapp/imagepicker.dart';
-import 'package:tourismapp/menupage.dart';
+import 'package:tourismapp/mytheme.dart';
 
 var serviceList =[
   {'title':'VIP Rooms', 'duration':'per Day' ,'price':20000},
@@ -16,12 +18,6 @@ final stylist;
 
    DetailScreen(this.stylist);
 
-//   @override
-//   State<DetailScreen> createState() => _DetailScreenState();
-// }
-
-
-// class _DetailScreenState extends State<DetailScreen> {
   
   @override
   Widget build(BuildContext context) {
@@ -44,7 +40,7 @@ body: SingleChildScrollView(
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height,
-                color: Colors.purple.withOpacity(0.2),
+                color: Color.fromARGB(255, 210, 82, 233).withOpacity(0.2),
               ),
             ],
           ),
@@ -63,7 +59,7 @@ body: SingleChildScrollView(
     width: MediaQuery.of(context).size.width,
     height: MediaQuery.of(context).size.height,
     decoration:const BoxDecoration(
-      color: Color.fromARGB(255, 152, 232, 243),
+      color: Mytheme.splash,
       borderRadius: BorderRadius.only(topLeft: Radius.circular(150),
       ),
     ),
@@ -91,8 +87,9 @@ body: SingleChildScrollView(
             padding:const EdgeInsets.only(top: 10),
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height/5,
-            color:const Color.fromARGB(255, 34, 160, 192),
-            child: Column(
+                   
+          color: Color.fromARGB(255, 205, 82, 230),
+        child: Column(
               children: <Widget>[
                 Row(
                   children: <Widget> [
@@ -201,7 +198,7 @@ Column(
       stylist["StateName"],
       style:const TextStyle(
         fontWeight: FontWeight.w500,
-        color: Color.fromARGB(255, 115, 102, 165),
+        color: Color.fromARGB(255, 61, 27, 199),
       ),
     ),
   const SizedBox(height: 10,),

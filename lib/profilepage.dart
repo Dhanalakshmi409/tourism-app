@@ -6,6 +6,7 @@ import 'package:tourismapp/bookingpage.dart';
 import 'package:tourismapp/homepage.dart';
 import 'package:tourismapp/imagepicker.dart';
 import 'package:tourismapp/loginscreen.dart';
+import 'package:tourismapp/mytheme.dart';
 import 'package:tourismapp/payment.dart';
 import 'package:tourismapp/ratingpage.dart';
 import 'package:tourismapp/signuppage.dart';
@@ -22,10 +23,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 218, 165, 228),
       appBar: AppBar(title: const Text('profile',),
-      backgroundColor: Colors.blue),
+      backgroundColor: Color.fromARGB(255, 153, 25, 228)),
       drawer: Drawer(
-        backgroundColor: Color.fromARGB(255, 230, 163, 185),
+        backgroundColor: Color.fromARGB(255, 167, 168, 228),
         child: ListView(
       children: [
         UserAccountsDrawerHeader(
